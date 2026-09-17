@@ -91,17 +91,20 @@
     <h2>Ferramentas da Perícia Digital</h2>
     <p class="subtitulo">Alguns softwares utilizados por profissionais durante investigações.</p>
     <div class="cards">
-        <article class="card">
+        <article class="card ferramenta-card" id="ftk-card" role="button" tabindex="0" aria-label="Abrir informações sobre o FTK Imager">
             <h3>FTK Imager</h3>
             <p>Utilizado para criar imagens forenses e recuperar arquivos sem alterar as evidências originais.</p>
+            <span class="clique-info">Clique para saber mais</span>
         </article>
-        <article class="card">
+        <article class="card ferramenta-card" id="encase-card" role="button" tabindex="0" aria-label="Abrir informações sobre o EnCase">
             <h3>EnCase</h3>
             <p>Software utilizado para análise de discos, documentos, histórico da internet e dispositivos móveis.</p>
+            <span class="clique-info">Clique para saber mais</span>
         </article>
-        <article class="card">
+        <article class="card ferramenta-card" id="autopsy-card" role="button" tabindex="0" aria-label="Abrir informações sobre o Autopsy">
             <h3>Autopsy</h3>
             <p>Plataforma que facilita a investigação de computadores, recuperação de arquivos e geração de relatórios periciais.</p>
+            <span class="clique-info">Clique para saber mais</span>
         </article>
  </div>
 </section>
@@ -135,6 +138,75 @@
         </article>
     </div>
 </section>
+
+<!-- Janela de informações do FTK Imager -->
+<div class="modal-ferramenta" id="modal-ftk" aria-hidden="true">
+    <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-ftk-titulo">
+        <button class="modal-fechar" id="fechar-ftk" type="button" aria-label="Fechar">×</button>
+        <h2 id="modal-ftk-titulo">FTK Imager</h2>
+        <h3>O que é?</h3>
+        <p>O FTK Imager é uma ferramenta utilizada na computação forense para visualizar e adquirir evidências digitais.</p>
+        <h3>Para que serve?</h3>
+        <p>Permite criar imagens forenses de discos e dispositivos de armazenamento, além de visualizar arquivos e dados presentes nessas mídias.</p>
+        <h3>Aplicação na perícia</h3>
+        <p>É utilizado para realizar a aquisição de dados, permitindo que o perito trabalhe sobre uma cópia da evidência durante a análise, preservando o dispositivo original.</p>
+        <h3>Principais recursos</h3>
+        <ul>
+            <li>Criação de imagens forenses;</li>
+            <li>Visualização de arquivos e pastas;</li>
+            <li>Aquisição de dados;</li>
+            <li>Verificação de integridade por hashes.</li>
+        </ul>
+        <h3>Exemplo de uso</h3>
+        <p>Um perito pode utilizar o FTK Imager para criar uma cópia forense de um HD apreendido e posteriormente analisar essa cópia sem trabalhar diretamente sobre o dispositivo original.</p>
+    </div>
+</div>
+
+    <!-- Janelas de informações das ferramentas -->
+<div class="modal-ferramenta" id="modal-encase" aria-hidden="true">
+    <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-encase-titulo">
+        <button class="modal-fechar" data-fechar="modal-encase" type="button" aria-label="Fechar">×</button>
+        <h2 id="modal-encase-titulo">EnCase</h2>
+        <h3>O que é?</h3>
+        <p>O EnCase é uma plataforma de investigação digital utilizada para coletar, examinar e analisar evidências armazenadas em computadores e outros dispositivos.</p>
+        <h3>Para que serve?</h3>
+        <p>É utilizado para localizar e analisar arquivos, documentos, registros, histórico de internet e outros dados que podem ser relevantes para uma investigação.</p>
+        <h3>Aplicação na perícia</h3>
+        <p>Na perícia digital, pode auxiliar o profissional na aquisição e análise de evidências, permitindo organizar informações encontradas durante a investigação.</p>
+        <h3>Principais recursos</h3>
+        <ul>
+            <li>Análise de discos e sistemas de arquivos;</li>
+            <li>Busca e recuperação de arquivos;</li>
+            <li>Análise de histórico e registros;</li>
+            <li>Organização e geração de relatórios de investigação.</li>
+        </ul>
+        <h3>Exemplo de uso</h3>
+        <p>Em uma investigação, o perito pode utilizar o EnCase para examinar uma mídia apreendida, localizar arquivos relevantes e reunir os resultados para documentação da análise.</p>
+    </div>
+</div>
+
+    <div class="modal-ferramenta" id="modal-autopsy" aria-hidden="true">
+    <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-autopsy-titulo">
+        <button class="modal-fechar" data-fechar="modal-autopsy" type="button" aria-label="Fechar">×</button>
+        <h2 id="modal-autopsy-titulo">Autopsy</h2>
+        <h3>O que é?</h3>
+        <p>O Autopsy é uma plataforma de análise forense digital utilizada para investigar computadores e dispositivos de armazenamento.</p>
+        <h3>Para que serve?</h3>
+        <p>Permite examinar arquivos, sistemas de arquivos, atividades do usuário e outros dados presentes em uma evidência digital.</p>
+        <h3>Aplicação na perícia</h3>
+        <p>O perito pode utilizá-lo para organizar e analisar informações encontradas durante uma investigação, facilitando a identificação de evidências relevantes.</p>
+        <h3>Principais recursos</h3>
+        <ul>
+            <li>Análise de imagens de discos;</li>
+            <li>Recuperação e pesquisa de arquivos;</li>
+            <li>Análise de atividades e registros;</li>
+            <li>Geração de relatórios periciais.</li>
+        </ul>
+        <h3>Exemplo de uso</h3>
+        <p>Um perito pode abrir uma imagem forense no Autopsy, pesquisar arquivos e registros relacionados ao caso e reunir os resultados encontrados em um relatório.</p>
+    </div>
+</div>
+    
 <footer>
     <h3>forensic.dev</h3>
     <p>Trabalho de Conclusão de Curso</p>
@@ -143,6 +215,72 @@
 </footer>
 </main>
 </div>
+    
+<script>
+    const ferramentas = [
+        { card: "ftk-card", modal: "modal-ftk" },
+        { card: "encase-card", modal: "modal-encase" },
+        { card: "autopsy-card", modal: "modal-autopsy" }
+    ];
+
+    function abrirModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.add("ativo");
+        modal.setAttribute("aria-hidden", "false");
+        modal.querySelector(".modal-fechar").focus();
+    }
+
+    function fecharModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove("ativo");
+        modal.setAttribute("aria-hidden", "true");
+        const item = ferramentas.find(f => f.modal === id);
+        if (item) document.getElementById(item.card).focus();
+    }
+
+    ferramentas.forEach(function(item) {
+        const card = document.getElementById(item.card);
+        card.addEventListener("click", function() { abrirModal(item.modal); });
+        card.addEventListener("keydown", function(event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                abrirModal(item.modal);
+            }
+        });
+    });
+
+    document.querySelectorAll(".modal-fechar").forEach(function(botao) {
+        botao.addEventListener("click", function() {
+            fecharModal(botao.dataset.fechar);
+        });
+    });
+
+    document.querySelectorAll(".modal-ferramenta").forEach(function(modal) {
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal) fecharModal(modal.id);
+        });
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            const aberto = document.querySelector(".modal-ferramenta.ativo");
+            if (aberto) fecharModal(aberto.id);
+        }
+    });
+</script>
+
+<script>
+const cardFtk=document.getElementById("ftk-card");
+const modalFtk=document.getElementById("modal-ftk");
+const fecharFtk=document.getElementById("fechar-ftk");
+function abrirFtk(){modalFtk.classList.add("ativo");modalFtk.setAttribute("aria-hidden","false");fecharFtk.focus();}
+function fecharFtkModal(){modalFtk.classList.remove("ativo");modalFtk.setAttribute("aria-hidden","true");cardFtk.focus();}
+cardFtk.addEventListener("click",abrirFtk);
+cardFtk.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();abrirFtk();}});
+fecharFtk.addEventListener("click",fecharFtkModal);
+modalFtk.addEventListener("click",e=>{if(e.target===modalFtk)fecharFtkModal();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&modalFtk.classList.contains("ativo"))fecharFtkModal();});
+</script>
 </body>
 </html>
 
