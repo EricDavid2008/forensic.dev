@@ -603,9 +603,6 @@ footer::after {
     }
 }
 
-/* ================================
-   FERRAMENTAS - CARDS CLICÁVEIS
-   ================================ */
 
 .ferramenta-card {
     cursor: pointer;
@@ -625,9 +622,6 @@ footer::after {
 }
 
 
-/* ================================
-   JANELA DE INFORMAÇÕES
-   ================================ */
 
 .modal-ferramenta {
     position: fixed;
@@ -650,7 +644,6 @@ footer::after {
 }
 
 
-/* Quando a janela estiver aberta */
 
 .modal-ferramenta.ativo {
     opacity: 1;
@@ -659,9 +652,6 @@ footer::after {
 }
 
 
-/* ================================
-   QUADRADO / CAIXA DE INFORMAÇÕES
-   ================================ */
 
 .modal-conteudo {
     position: relative;
@@ -689,9 +679,6 @@ footer::after {
 }
 
 
-/* ================================
-   TÍTULO DA FERRAMENTA
-   ================================ */
 
 .modal-conteudo h2 {
     margin-bottom: 25px;
@@ -704,9 +691,6 @@ footer::after {
 }
 
 
-/* ================================
-   TÍTULOS INTERNOS
-   ================================ */
 
 .modal-conteudo h3 {
     margin-top: 20px;
@@ -718,9 +702,6 @@ footer::after {
 }
 
 
-/* ================================
-   TEXTOS
-   ================================ */
 
 .modal-conteudo p,
 .modal-conteudo li {
@@ -732,18 +713,12 @@ footer::after {
 }
 
 
-/* ================================
-   LISTA DE RECURSOS
-   ================================ */
 
 .modal-conteudo ul {
     margin: 5px 0 0 20px;
 }
 
 
-/* ================================
-   BOTÃO X
-   ================================ */
 
 .modal-fechar {
     position: absolute;
@@ -781,10 +756,6 @@ footer::after {
 }
 
 
-/* ================================
-   CELULAR
-   ================================ */
-
 @media (max-width: 600px) {
 
     .modal-ferramenta {
@@ -816,10 +787,6 @@ footer::after {
 .modal-fechar:hover { color:var(--primary-light); transform:scale(1.1); }
 @media (max-width:600px){ .modal-ferramenta{padding:18px}.modal-conteudo{padding:32px 24px}.modal-conteudo h2{font-size:1.6rem} }
 
-
-/* ================================
-   COMO SE PROTEGER
-   ================================ */
 
 .protecao-intro {
     position: relative;
